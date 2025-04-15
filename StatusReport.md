@@ -39,41 +39,41 @@ We then downloaded both datasets and began cleaning. We only kept rows with vali
 
 #### Completed Plan: 
 Initial Project Plan (Due April 2nd)
-[March 31 - April 2]  
-Finalize research questions  (Anee)
-Identify and document dataset sources (Anantya)
-Plan dataset retrieval strategy (programmatic acquisition or documented steps)  (Anantya)
-Outline data integration and analysis approach (Both)
-Write and submit project plan (Both)
+- [March 31 - April 2]  
+- Finalize research questions  (Anee)
+- Identify and document dataset sources (Anantya)
+- Plan dataset retrieval strategy (programmatic acquisition or documented steps)  (Anantya)
+- Outline data integration and analysis approach (Both)
+- Write and submit project plan (Both)
 
 Status Report (Due April 15th)
-[April 3 - April 10]
-Write Python scripts for dataset acquisition  (Both)
-Implement integrity checks (checksums, missing values) (Anee)
-Perform initial data profiling and cleaning  (Anee)
-Conduct exploratory data analysis (EDA)  (Both)
-[April 11 - April 15]
-Merge datasets programmatically (Pandas/SQL) (Both)
-Begin generating basic visualizations  (Both)
-Document progress and methodology (Anantya)
-Submit status report  (Anantya)
+- [April 3 - April 10]
+- Write Python scripts for dataset acquisition  (Both)
+- Implement integrity checks (checksums, missing values) (Anee)
+- Perform initial data profiling and cleaning  (Anee)
+- Conduct exploratory data analysis (EDA)  (Both)
+- [April 11 - April 15]
+- Merge datasets programmatically (Pandas/SQL) (Both)
+- Begin generating basic visualizations  (Both)
+- Document progress and methodology (Anantya)
+- Submit status report  (Anantya)
 
 #### Pending Tasks:
 Final Project Submission (Due May 1st)
-[April 16 - April 22]
-Build on current code for more in-depth analysis (Both)
-Find better visualizations and explore how to showcase findings 
-Finalize data integration and ensure dataset compatibility  (Anantya)
+- [April 16 - April 22]
+- Build on current code for more in-depth analysis (Both)
+- Find better visualizations and explore how to showcase findings 
+- Finalize data integration and ensure dataset compatibility  (Anantya)
 Already figured out 
-Expand on analysis with additional insights  (Anee)
-Implement workflow automation (script execution from start to finish) (Both)
-We are currently thinking about how best to incorporate Snakemake into our workflow, especially since we are working in a Google Colab environment. Because Snakemake is typically more compatible with local or Linux-based environments, we plan to spend more time exploring workarounds or consider packaging our Colab steps into a bash script or Python function that mimics Snakemake-like automation.
-[April 23 - April 30]
-Create metadata for reproducibility  (Anantya)
-Complete Markdown documentation  (Both)
-Finalize citations for datasets and software used  (Anee)
-Archive project and obtain a persistent identifier (Both)
-Submit final project release on GitHub  (Anantya)
+- Expand on analysis with additional insights  (Anee)
+- Implement workflow automation (script execution from start to finish) (Both)
+- We are currently thinking about how best to incorporate Snakemake into our workflow, especially since we are working in a Google Colab environment. Because Snakemake is typically more compatible with local or Linux-based environments, we plan to spend more time exploring workarounds or consider packaging our Colab steps into a bash script or Python function that mimics Snakemake-like automation.
+- [April 23 - April 30]
+- Create metadata for reproducibility  (Anantya)
+- Complete Markdown documentation  (Both)
+- Finalize citations for datasets and software used  (Anee)
+- Archive project and obtain a persistent identifier (Both)
+- Submit final project release on GitHub  (Anantya)
 
 ### Changes to Project Plan
 Overall, we have stayed aligned with our initial project plan. The main deviation was our switch from OpenRefine to Pandas for data cleaning, which ultimately proved more suitable for our goals. Additionally, we’ve already begun gaining insights earlier than expected, allowing us more time in the coming weeks to refine our analyses and visuals.
