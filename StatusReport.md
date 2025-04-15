@@ -75,7 +75,7 @@ Finalize citations for datasets and software used  (Anee)
 Archive project and obtain a persistent identifier (Both)
 Submit final project release on GitHub  (Anantya)
 
-#### Changes to Project Plan
+### Changes to Project Plan
 Overall, we have stayed aligned with our initial project plan. The main deviation was our switch from OpenRefine to Pandas for data cleaning, which ultimately proved more suitable for our goals. Additionally, we’ve already begun gaining insights earlier than expected, allowing us more time in the coming weeks to refine our analyses and visuals.
 Moving forward, we plan to dig deeper into our datasets. This includes analyzing metadata such as release year, director, cast, and content type. We also aim to explore ratings trends across time and whether genre popularity varies by year if there’s time. These insights could enrich our understanding of content strategies on each platform.
 Another area for improvement is data visualization. While our current plots are functional, we believe that using libraries like Seaborn or Plotly may help us create more detailed and interactive graphs, particularly for the final presentation.
