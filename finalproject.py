@@ -3,20 +3,22 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# go to this website - https://datasets.imdbws.com/  - and download files title.basics.tsv.gz and title.ratings.tsv.gz 
+
 # Ensure output folder exists
 os.makedirs("results", exist_ok=True)
 
-# --- Load data ---
+# Load Data 
 netflix_file = "finalproject/data/netflix/netflix_titles.csv"
 basics_file = "finalproject/data/imdb/title.basics.tsv"
 ratings_file = "finalproject/data/imdb/title.ratings.tsv"
 
-# Sanity check
+# assertion check
 #assert os.path.exists(netflix_file), "Netflix file missing"
 #assert os.path.exists(basics_file), "IMDb basics file missing"
 #assert os.path.exists(ratings_file), "IMDb ratings file missing"
 
-# --- Read data ---
+# Read Data
 netflix_df = pd.read_csv(netflix_file)
 netflix_df = netflix_df.dropna(subset=["title", "listed_in"])
 netflix_df["title_lower"] = netflix_df["title"].str.lower()
@@ -30,7 +32,7 @@ imdb_df["primaryTitle_lower"] = imdb_df["primaryTitle"].str.lower()
 
 merged_df = netflix_df.merge(imdb_df, left_on="title_lower", right_on="primaryTitle_lower", how="inner")
 
-# --- Genre Distribution Comparison ---
+# Genre Distribution Comparison question 1
 netflix_genres = netflix_df["listed_in"].str.split(", ").explode()
 netflix_genre_counts = netflix_genres.value_counts()
 
@@ -46,14 +48,14 @@ plt.savefig("finalproject/results/netflix_genres.png")
 plt.savefig("finalproject/results/imdb_genres.png")
 plt.close()
 
-# --- Originals vs Non-Originals Ratings ---
+# Originals vs Non-Originals Ratings question 2
 merged_df["is_original"] = merged_df["title"].str.contains("netflix", case=False, na=False)
 merged_df.groupby("is_original")["averageRating"].mean().plot(kind="bar", title="Avg IMDB Rating: Netflix Original vs Non-Original")
 plt.tight_layout()
 plt.savefig("finalproject/results/original_vs_nonoriginal.png")
 plt.close()
 
-# --- Availability of Top 500 IMDB titles on Netflix ---
+# Availability of Top 500 IMDB titles on Netflix question 3
 top_rated = imdb_df.sort_values("averageRating", ascending=False).head(500)
 top_rated["on_netflix"] = top_rated["primaryTitle_lower"].isin(netflix_df["title_lower"])
 percent_available = top_rated["on_netflix"].mean()
@@ -61,7 +63,7 @@ percent_available = top_rated["on_netflix"].mean()
 with open("results/top500_availability.txt", "w") as f:
     f.write(f"Percentage of Top 500 IMDB titles available on Netflix: {percent_available:.2%}\n")
 
-# --- Ratings by Genre (Boxplot) ---
+# Ratings by Genre (Boxplot) question 4
 merged_df["genre_list"] = merged_df["listed_in"].str.split(", ")
 exploded = merged_df.explode("genre_list")
 filtered = exploded[exploded["genre_list"].isin(
