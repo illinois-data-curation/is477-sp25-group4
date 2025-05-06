@@ -6,6 +6,7 @@ import zipfile
 import requests
 from io import BytesIO
 import matplotlib.pyplot as plt
+import seaborn as sns 
 
 # Download Netflix dataset
 netflix_path = kagglehub.dataset_download("shivamb/netflix-shows")
@@ -84,4 +85,21 @@ top_rated["on_netflix"] = top_rated["primaryTitle_lower"].isin(netflix_df["title
 percent_available = top_rated["on_netflix"].mean()
 print(f"Percentage of Top 500 IMDB titles available on Netflix: {percent_available:.2%}")
 
+# What is the spread of rating based on genre? (including average and any outliers)
 
+# explode genres 
+merged_df["genre_list"] = merged_df["listed_in"].str.split(", ")
+exploded = merged_df.explode("genre_list")
+
+filtered = exploded[exploded["genre_list"].isin(
+    exploded["genre_list"].value_counts()[exploded["genre_list"].value_counts() >= 30].index
+)]
+
+# plot 
+plt.figure(figsize=(12, 6))
+sns.boxplot(data=filtered, x="averageRating", y="genre_list", orient="h")
+plt.title("IMDb Ratings by Genre (Boxplot)")
+plt.xlabel("IMDb Rating")
+plt.ylabel("Genre")
+plt.tight_layout()
+plt.show()
