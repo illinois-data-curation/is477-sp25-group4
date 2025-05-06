@@ -56,7 +56,7 @@ plt.savefig("finalproject/results/original_vs_nonoriginal.png")
 plt.close()
 
 # Availability of Top 1000 IMDB titles on Netflix question 3
-sort_values("averageRating", ascending=False).head(1000)
+top_rated = imdb_df.sort_values("averageRating", ascending=False).head(1000)
 top_rated["on_netflix"] = top_rated["primaryTitle_lower"].isin(netflix_df["title_lower"])
 percent_available = top_rated["on_netflix"].mean()
 print(f"Percentage of Top 1000 IMDB titles available on Netflix: {percent_available:.4%}")
