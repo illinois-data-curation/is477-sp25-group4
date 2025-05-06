@@ -55,13 +55,14 @@ plt.tight_layout()
 plt.savefig("finalproject/results/original_vs_nonoriginal.png")
 plt.close()
 
-# Availability of Top 500 IMDB titles on Netflix question 3
-top_rated = imdb_df.sort_values("averageRating", ascending=False).head(500)
+# Availability of Top 1000 IMDB titles on Netflix question 3
+sort_values("averageRating", ascending=False).head(1000)
 top_rated["on_netflix"] = top_rated["primaryTitle_lower"].isin(netflix_df["title_lower"])
 percent_available = top_rated["on_netflix"].mean()
+print(f"Percentage of Top 1000 IMDB titles available on Netflix: {percent_available:.4%}")
 
-with open("results/top500_availability.txt", "w") as f:
-    f.write(f"Percentage of Top 500 IMDB titles available on Netflix: {percent_available:.2%}\n")
+with open("results/top1000_availability.txt", "w") as f:
+    f.write(f"Percentage of Top 1000 IMDB titles available on Netflix: {percent_available:.4%}\n")
 
 # Ratings by Genre (Boxplot) question 4
 merged_df["genre_list"] = merged_df["listed_in"].str.split(", ")
