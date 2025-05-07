@@ -1,10 +1,15 @@
  # IS 477 Final Project Report
 
 ** Group Members: **  Anee Anisa, Anantya Kasturi
+
 ** Group Number: ** 4
+
 ** Title: ** Netflix and IMDb Ratings Analysis
+
 ** Link to archival record:** [Zenodo Link]
+
 ** Contributors: **  Anee Anisa and Anantya Kasturi
+
 
 ## Summary
 For our project, we decided to look at two datasets: Netflix data from Kaggle and IMDb data from the platform itself. Our goal was to find how IMDb ratings influence the movies and TV shows Netflix uses for its platform. In order to do this, we centered our project around a complete analysis and comparison of data from the two platforms. Our main objective through analysis was to investigate prominent trends and insights. Specifically, we wanted to look at top ten genre distributions in both Netflix and Imdb content, the availability of top-rated content on Netflix, IMDb ratings compared between Netflix originals and non-originals, and IMDb ratings by genre. By conducting such an analysis, we were able to highlight how different kinds of content are promoted and curated, and what genres resonated most with audiences. We also were able to see how the availability of streaming aligns with user demand. This project is important because it studies media trends, data-driven decision making in the entertainment industry, and user behavior. This project could offer crucial insights for streaming platforms, content creation, and marketing purposes. We can understand and adapt to ever changing trends in viewer preferences and dynamics within the digital landscape.
