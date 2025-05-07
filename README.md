@@ -93,10 +93,10 @@ Our analysis used datasets which are available on Kaggle(Netflix) or the interne
    - source .venv/bin/activate
 3. Install required dependencies
    - pip install -r requirements.txt
-   - This installs:
-   - pandas for data manipulation
-   - matplotlib and seaborn for plotting
-   - snakemake for workflow automation
+   * This installs:
+    + pandas for data manipulation
+   * matplotlib and seaborn for plotting
+   * snakemake for workflow automation
 4. Download the datasets
    - Manually download the following datasets and place them in the data/ directory:
    - Netflix Dataset https://www.kaggle.com/datasets/shivamb/netflix-shows
