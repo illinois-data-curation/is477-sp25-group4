@@ -46,7 +46,7 @@ After cleaning and merging the datasets, we conducted 4 primary analyses.
 
 The first question in our research was “How does the genre distribution on Netflix compare to top-rated IMDB movies?” For this genre comparison we found out that Netflix’s top genres included International movies, dramas, comedies, international TV shows, documentaries, action & adventure, TV dramas, independent movies, children & family movies, and romantic movies, whereas IMDb’s top-rated content skews toward genres like documentary, drama, comedy, thriller, music, romance, crime, history, action, and biography. 
 
-![alt text]([http://url/to/img.png](https://github.com/illinois-data-curation/is477-sp25-group4/blob/main/netflix_genres.png))
+![Top 10 Genres]([http://url/to/img.png](https://github.com/illinois-data-curation/is477-sp25-group4/blob/main/netflix_genres.png))
 
 
 
