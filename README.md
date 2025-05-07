@@ -1,14 +1,14 @@
  # IS 477 Final Project Report
 
-** Group Members: **  Anee Anisa, Anantya Kasturi
+### Group Members: Anee Anisa, Anantya Kasturi
 
-** Group Number: ** 4
+### Group Number: 4
+ 
+### Title: Netflix and IMDb Ratings Analysis
 
-** Title: ** Netflix and IMDb Ratings Analysis
+### Link to archival record: https://sandbox.zenodo.org/records/215139
 
-** Link to archival record:** [Zenodo Link]
-
-** Contributors: **  Anee Anisa and Anantya Kasturi
+### Contributors: Anee Anisa and Anantya Kasturi
 
 
 ## Summary
@@ -28,10 +28,13 @@ Overall, our project emphasizes how data from various platforms can be used to a
 ## Data profile
 We used two publicly available datasets to complete our analysis. The first was from Kaggle, which contains metadata for Netflix content, and the other from IMDb’s official data repository, datasets.imdbws.com, which contains multiple files with different information but only information about titles and their IMDb ratings were used for this report. 
 The Netflix dataset was sourced from Kaggle at (https://www.kaggle.com/datasets/shivamb/netflix-shows). It includes metadata for thousands of movies and TV shows available on Netflix. Some of the key columns include title, genre (listed as "listed_in"), release year, type (TV Show or Movie), cast, director, date added, rating (TV-MA, PG, etc.), and duration. The dataset is licensed under a Creative Commons License (CC BY-NC-SA 4.0), meaning it can be freely used for educational or research purposes as long as it's not for commercial gain and proper credit is given. Before merging this data with the IMDb dataset, we performed several preprocessing steps. We removed rows that had missing or null values in critical columns like title and genre. Additionally, all titles were converted to lowercase to ensure consistency when matching with IMDb titles, since capitalization differences can interfere with data merges later on. 
+
 The second dataset we used was obtained directly from IMDb’s official data dump site at datasets.imdbws.com. IMDb provides multiple .tsv.gz files representing different aspects of their catalog. For this project, we focused on two of the seven different files: title.basics.tsv.gz and title.ratings.tsv.gz. The title.basics.tsv.gz file contains metadata like title ID (tconst), primary title, title type (e.g., movie or TV series), and genres. The title.ratings.tsv.gz.file includes IMDb ratings for each title along with the number of votes. These files are provided by IMDb for personal and non-commercial use under their terms of service. Similar to the Netflix dataset, we cleaned the IMDb data by dropping rows with missing or invalid values in key fields like primayTitle, genres, and averageRating. We also converted all relevant text columns (e.g., primaryTitle) to lowercase to facilitate case-insensitive joins with the Netflix dataset.
+
 A major part of our preprocessing focused on aligning the two datasets and making them compatible. Although both contain title names, the formatting often differs slightly. Netflix might list a title like "The Office (U.S.)" while IMDb has it as "The Office." To manage these inconsistencies, we standardized all titles to lowercase and relied on exact string matching. This resolved the majority of mismatches, although some differences remained due to punctuation, subtitles, or different naming conventions. Additionally, we limited our analysis to only movies and TV series from IMDb (excluding shorts, video games, etc.) to align with the types of content represented in the Netflix dataset.
 Overall, by carefully cleaning, filtering, and standardizing both datasets, we created a reliable foundation for future comparisons between Netflix’s available content and IMDb’s highly rated titles. This sets up our analysis to be as accurate and informational as possible while retaining as much data.
 Findings 
+
 After cleaning and merging the datasets, we conducted 4 primary analyses. 
 
 The first question in our research was “How does the genre distribution on Netflix compare to top-rated IMDB movies?” For this genre comparison we found out that Netflix’s top genres included International movies, dramas, comedies, international TV shows, documentaries, action & adventure, TV dramas, independent movies, children & family movies, and romantic movies, whereas IMDb’s top-rated content skews toward genres like documentary, drama, comedy, thriller, music, romance, crime, history, action, and biography. 
