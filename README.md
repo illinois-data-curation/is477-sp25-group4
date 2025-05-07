@@ -94,29 +94,29 @@ Our analysis used datasets which are available on Kaggle(Netflix) or the interne
 3. Install required dependencies
    - pip install -r requirements.txt
    * This installs:
-    + pandas for data manipulation
-   * matplotlib and seaborn for plotting
-   * snakemake for workflow automation
+     + pandas for data manipulation
+     + matplotlib and seaborn for plotting
+     + snakemake for workflow automation
 4. Download the datasets
-   - Manually download the following datasets and place them in the data/ directory:
-   - Netflix Dataset https://www.kaggle.com/datasets/shivamb/netflix-shows
-   - Save as: data/netflix/netflix_titles.csv
-   - IMDb Dataset datasets.imdbws.com only 2 files are necessary for download
-   - Required files save as:
-   - title.basics.tsv.gz → extract to → data/imdb/title.basics.tsv
-   - title.ratings.tsv.gz → extract to → data/imdb/title.ratings.tsv
+   * Manually download the following datasets and place them in the data/ directory:
+      + Netflix Dataset https://www.kaggle.com/datasets/shivamb/netflix-shows
+      + Save as: data/netflix/netflix_titles.csv
+      + IMDb Dataset datasets.imdbws.com only 2 files are necessary for download
+      + Required files save as:
+         + title.basics.tsv.gz → extract to → data/imdb/title.basics.tsv
+         + title.ratings.tsv.gz → extract to → data/imdb/title.ratings.tsv
 5. Run the snakemake workflow
    - Make sure you're in the finalproject/ directory
    - snakemake –cores 4
-   - This will:
-   - Run scripts/finalproject.py
-   - Process and merge the datasets
-   - Generate and save:
-   - netflix_genres.png
-   - imdb_genres.png
-   - original_vs_nonoriginal.png
-   - top1000_availability.txt
-   - genre_rating_boxplot.png
+   * This will:
+      + Run scripts/finalproject.py
+      + Process and merge the datasets
+      + Generate and save:
+        + netflix_genres.png
+        + imdb_genres.png
+        + original_vs_nonoriginal.png
+        + top1000_availability.txt
+        + genre_rating_boxplot.png
 
 Overall the structure of the folder should look this: 
 
