@@ -11,10 +11,10 @@
 ### Contributors: Anee Anisa and Anantya Kasturi
 
 
-## Summary
+### Summary
 For our project, we decided to look at two datasets: Netflix data from Kaggle and IMDb data from the platform itself. Our goal was to find how IMDb ratings influence the movies and TV shows Netflix uses for its platform. In order to do this, we centered our project around a complete analysis and comparison of data from the two platforms. Our main objective through analysis was to investigate prominent trends and insights. Specifically, we wanted to look at top ten genre distributions in both Netflix and Imdb content, the availability of top-rated content on Netflix, IMDb ratings compared between Netflix originals and non-originals, and IMDb ratings by genre. By conducting such an analysis, we were able to highlight how different kinds of content are promoted and curated, and what genres resonated most with audiences. We also were able to see how the availability of streaming aligns with user demand. This project is important because it studies media trends, data-driven decision making in the entertainment industry, and user behavior. This project could offer crucial insights for streaming platforms, content creation, and marketing purposes. We can understand and adapt to ever changing trends in viewer preferences and dynamics within the digital landscape.
 
-## The four core research questions we focused on were the following:
+The four core research questions we focused on were the following:
 
 - What are the most prominent genres on Netflix compared to the top-rated IMDb titles?
 - How do the Netflix Originals perform compared to non-original Netflix content on IMDb?
@@ -25,7 +25,7 @@ Our approach to this study involved gathering metadata from both sources, conduc
 
 Overall, our project emphasizes how data from various platforms can be used to analyze user preferences, media trends, and strategic choices made by the streaming platforms. Through our process of cleaning, merging, and visualizing the data, we were able to draw crucial conclusions that could be useful in the future for content creators, marketing teams, and consumers. The insights we uncovered further reinforced the importance of having open source data in a transforming industry and showed how analytical tools can piece together even the most complex of datasets in the entertainment industry. 
 
-## Data profile
+### Data profile
 We used two publicly available datasets to complete our analysis. The first was from Kaggle, which contains metadata for Netflix content, and the other from IMDb’s official data repository, datasets.imdbws.com, which contains multiple files with different information but only information about titles and their IMDb ratings were used for this report. 
 The Netflix dataset was sourced from Kaggle at (https://www.kaggle.com/datasets/shivamb/netflix-shows). It includes metadata for thousands of movies and TV shows available on Netflix. Some of the key columns include title, genre (listed as "listed_in"), release year, type (TV Show or Movie), cast, director, date added, rating (TV-MA, PG, etc.), and duration. The dataset is licensed under a Creative Commons License (CC BY-NC-SA 4.0), meaning it can be freely used for educational or research purposes as long as it's not for commercial gain and proper credit is given. Before merging this data with the IMDb dataset, we performed several preprocessing steps. We removed rows that had missing or null values in critical columns like title and genre. Additionally, all titles were converted to lowercase to ensure consistency when matching with IMDb titles, since capitalization differences can interfere with data merges later on. 
 
@@ -72,19 +72,19 @@ We recognize that our current study has relied heavily on title matching across 
 
 In conclusion, our project has opened up several additional ways to conduct further research and compare across various platforms. By applying machine learning, qualitative analysis, and other models, there are many options to continue building on this work. 
 
-Reproducing
+### Reproducing
 In order to reproduce our work, we diligently prioritized documenting our methods, maintaining clean code and records, and using publicly available datasets. This section will outline the steps required to reproduce our results from accessing the data to evaluation. 
 
 Our analysis used datasets which are available on Kaggle(Netflix) or the internet(IMDb). They were downloaded in CSV and tsv format respectively. We did the required processing using Python and the pandas library. We then used matplotlib and seaborn for visualizations, and scikit-learn for any modeling components. Below are the steps to replicate our results:
 
-Clone the Repository: 
-git clone https://github.com/illinois-data-curation/is477-sp25-group4 
-cd finalproject 
-Set up a virtual environment 
-python3 -m venv .venv
-source .venv/bin/activate
-Install required dependencies 
-pip install -r requirements.txt
+1. Clone the Repository:
+   - git clone https://github.com/illinois-data-curation/is477-sp25-group4
+   - cd finalproject 
+2. Set up a virtual environment
+   - python3 -m venv .venv
+   - source .venv/bin/activate
+3. Install required dependencies
+   - pip install -r requirements.txt
 This installs:
 pandas for data manipulation
 matplotlib and seaborn for plotting
