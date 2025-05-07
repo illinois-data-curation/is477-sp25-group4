@@ -6,17 +6,17 @@ import seaborn as sns
 # Ensure output folder exists
 os.makedirs("results", exist_ok=True)
 
-# --- Load data ---
+# load Data
 netflix_file = "data/netflix/netflix_titles.csv"
 basics_file = "data/imdb/title.basics.tsv"
 ratings_file = "data/imdb/title.ratings.tsv"
 
-# Sanity check
+# check
 #assert os.path.exists(netflix_file), "Netflix file missing"
 #assert os.path.exists(basics_file), "IMDb basics file missing"
 #assert os.path.exists(ratings_file), "IMDb ratings file missing"
 
-# --- Read data ---
+# read data
 netflix_df = pd.read_csv(netflix_file)
 netflix_df = netflix_df.dropna(subset=["title", "listed_in"])
 netflix_df["title_lower"] = netflix_df["title"].str.lower()
@@ -30,7 +30,7 @@ imdb_df["primaryTitle_lower"] = imdb_df["primaryTitle"].str.lower()
 
 merged_df = netflix_df.merge(imdb_df, left_on="title_lower", right_on="primaryTitle_lower", how="inner")
 
-# --- Genre Distribution Comparison ---
+# Genre Distribution Comparison Question 1
 netflix_genres = netflix_df["listed_in"].str.split(", ").explode()
 netflix_genre_counts = netflix_genres.value_counts()
 
@@ -46,7 +46,7 @@ plt.savefig("results/netflix_genres.png")
 plt.savefig("results/imdb_genres.png")
 plt.close()
 
-# --- Originals vs Non-Originals Ratings ---
+# Originals vs Non-Originals Ratings Question 2
 merged_df["is_original"] = merged_df["title"].str.contains("netflix", case=False, na=False)
 merged_df.groupby("is_original")["averageRating"].mean().plot(kind="bar", title="Avg IMDB Rating: Netflix Original vs Non-Original")
 plt.tight_layout()
@@ -62,7 +62,7 @@ print(f"Percentage of Top 1000 IMDB titles available on Netflix: {percent_availa
 with open("results/top1000_availability.txt", "w") as f:
     f.write(f"Percentage of Top 1000 IMDB titles available on Netflix: {percent_available:.4%}\n")
     
-# --- Ratings by Genre (Boxplot) ---
+# Ratings by Genre (Boxplot) Question 4
 merged_df["genre_list"] = merged_df["listed_in"].str.split(", ")
 exploded = merged_df.explode("genre_list")
 filtered = exploded[exploded["genre_list"].isin(
