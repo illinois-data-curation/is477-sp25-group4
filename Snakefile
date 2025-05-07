@@ -3,7 +3,7 @@ rule all:
         "results/netflix_genres.png",
         "results/imdb_genres.png",
         "results/original_vs_nonoriginal.png",
-        "results/top500_availability.txt"
+        "results/top1000_availability.txt"
 
 rule run_all_analysis:
     input:
@@ -14,6 +14,6 @@ rule run_all_analysis:
         "results/netflix_genres.png",
         "results/imdb_genres.png",
         "results/original_vs_nonoriginal.png",
-        "results/top500_availability.txt"
+        "results/top1000_availability.txt"
     shell:
         "python scripts/finalprojectcode.py"
