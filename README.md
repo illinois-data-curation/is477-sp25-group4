@@ -100,7 +100,7 @@ Our analysis used datasets which are available on Kaggle(Netflix) or the interne
 4. Download the datasets
    * Manually download the following datasets and place them in the data/ directory:
       + Netflix Dataset https://www.kaggle.com/datasets/shivamb/netflix-shows
-      + Save as: data/netflix/netflix_titles.csv
+         + Save as: data/netflix/netflix_titles.csv
       + IMDb Dataset datasets.imdbws.com only 2 files are necessary for download
       + Required files save as:
          + title.basics.tsv.gz → extract to → data/imdb/title.basics.tsv
