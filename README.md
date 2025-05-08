@@ -46,7 +46,7 @@ After cleaning and merging the datasets, we conducted 4 primary analyses.
 
 The first question in our research was “How does the genre distribution on Netflix compare to top-rated IMDB movies?” For this genre comparison we found out that Netflix’s top genres included International movies, dramas, comedies, international TV shows, documentaries, action & adventure, TV dramas, independent movies, children & family movies, and romantic movies, whereas IMDb’s top-rated content skews toward genres like documentary, drama, comedy, thriller, music, romance, crime, history, action, and biography. 
 
-![Top 10 Genres](https://github.com/illinois-data-curation/is477-sp25 group4/blob/ab40cd2a24bb1b6defcbb52cea0db67400714f4c/netflix_genres.png)
+![Top 10 Genres](https://github.com/illinois-data-curation/is477-sp25-group4/blob/ab40cd2a24bb1b6defcbb52cea0db67400714f4c/netflix_genres.png)
 
 
 
@@ -58,11 +58,17 @@ These differences reveal Netflix’s tendency to cater to international and dive
 
 The second question in our research was “Do Netflix Originals generally receive higher or lower IMDB ratings compared to non-netflix content?” For this original vs non-original comparison we created a bar chart comparing the average IMDb ratings of Netflix originals and non-originals. 
 
+
+![Average IMDb Rating](https://github.com/illinois-data-curation/is477-sp25-group4/blob/c8987a2f46e76f9150c392b421703726d4b08512/original_vs_nonoriginal.png)
+
 This bar chart shows how netflix originals tend to receive lower ratings on average with a rating of around 4.5 whereas other content on netflix has an average rating of around 6.5. This can be caused by a multiple of things such as the few number of Netflix originals out there leading to higher impact if one of them does bad. Overall though the difference suggests a critical gap despite the marketing prominence of Netflix originals. 
 
 The third question we asked in our research was “Are highly-rated IMDB movies and TV shows available on Netflix?” For this comparison we simply executed some mathematical code to find quantitative answers for how much of IMDb rated movies are on Netflix. We took the top 1000 IMDb rated content and saw how much of that was available on Netflix. We came out with a result of 1.10% of IMDb’s top 500 rated titles are currently available on Netflix. This extremely low overlap emphasizes how limited Netflix’s catalog is when it comes to historically top-rated content. It points to potential gaps in licensing, competition from other streaming services, or Netflix’s strategic pivot toward prioritizing Originals over acquiring legacy content.
 
 The last question we researched about and added at the end was “What are the IMDb ratings of each genre including factors like average rating and outlier productions.” For this comparison between rating by genre we created a genre-level box plot analysis. 
+
+
+![Boxplot Ratings](https://github.com/illinois-data-curation/is477-sp25-group4/blob/c8987a2f46e76f9150c392b421703726d4b08512/genre_rating_boxplot.png)
 
 This revealed that genres like "Documentaries" and "Classic Movies" tend to receive higher IMDb ratings on average, while genres such as "Reality TV" and "Stand-Up Comedy" show more variability and generally lower ratings. This provides insight into which types of content are more likely to be critically well-received. It also shows outliers that can be useful in seeing if a genre is actually popular but skewed by a certain movie or series. On the same note but opposite view you can see movies that did exceptionally well in a certain genre through the outliers plotted on the right end of the graph. 
 
@@ -119,6 +125,10 @@ Our analysis used datasets which are available on Kaggle(Netflix) or the interne
         + genre_rating_boxplot.png
 
 Overall the structure of the folder should look this: 
+
+
+![Reproducing](https://github.com/illinois-data-curation/is477-sp25-group4/blob/9e5052658f2cafae998ffbe48480ed6ba8b5c5f0/reproducibility.png)
+
 
 We have additionally added comments in our code to explain the purpose and logic behind each step. This helps readers not only understand what we did, but why we did it. We made sure to use clear variable and function names to make the code more readable and easier to adapt for future studies. 
 
