@@ -11,6 +11,7 @@ Netflix and IMDb Ratings Analysis
 
 ### Link to archival record: 
 https://sandbox.zenodo.org/records/215139
+DOI Badge: DOI 10.5072/zenodo.215139
 
 ### Contributors: 
 Anee Anisa and Anantya Kasturi
